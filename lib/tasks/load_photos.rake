@@ -27,17 +27,17 @@ task :load_photos => :environment do
   # Loading glass_stairs
   load_photos("glass_photos/stairs" ,GlassStair, GlassPhoto.first.glass_stairs, "stairs", "GlassStair", 88)
   # # Loading glass_railings
-  load_photos("glass_photos/railings" ,GlassRailing, GlassPhoto.first.glass_railings, "railing", "GlassRailing", 46)
+  # load_photos("glass_photos/railings" ,GlassRailing, GlassPhoto.first.glass_railings, "railing", "GlassRailing", 46)
   # Loading glass_elevator
-  load_photos("glass_photos/elevators" ,GlassElevator, GlassPhoto.first.glass_elevators, "elevator", "GlassElevator", 7)
+  # load_photos("glass_photos/elevators" ,GlassElevator, GlassPhoto.first.glass_elevators, "elevator", "GlassElevator", 7)
   # Loading glass_floor
-  load_photos("glass_photos/floors" ,GlassFloor, GlassPhoto.first.glass_floors, "floor", "GlassFloor", 12)
+  # load_photos("glass_photos/floors" ,GlassFloor, GlassPhoto.first.glass_floors, "floor", "GlassFloor", 12)
   #Loading glass_window
-  load_photos("glass_photos/windows&doors" ,GlassWindowsDoor, GlassPhoto.first.glass_windows_doors, "window_door", "GlassWindowsDoor", 28)
+  # load_photos("glass_photos/windows&doors" ,GlassWindowsDoor, GlassPhoto.first.glass_windows_doors, "window_door", "GlassWindowsDoor", 28)
   #Loading glass_shower_door
-  load_photos("glass_photos/showerdoors" ,GlassShowerDoor, GlassPhoto.first.glass_shower_doors, "showerdoor", "GlassShowerDoor", 11)
+  # load_photos("glass_photos/showerdoors" ,GlassShowerDoor, GlassPhoto.first.glass_shower_doors, "showerdoor", "GlassShowerDoor", 11)
   #Loading glass_wine_room
-  load_photos("glass_photos/wine_rooms" ,GlassWineRoom, GlassPhoto.first.glass_wine_rooms, "wineroom", "GlassWineRoom", 12)
+  # load_photos("glass_photos/wine_rooms" ,GlassWineRoom, GlassPhoto.first.glass_wine_rooms, "wineroom", "GlassWineRoom", 12)
   #Loading glass_other
   load_photos("glass_photos/other" ,OtherGlassStructure, GlassPhoto.first.other_glass_structures, "other", "OtherGlassStructure", 10)
   #Loading metal_fabrication
