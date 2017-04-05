@@ -1,0 +1,119 @@
+.navbar-header
+  margin-right: 0rem!important
+  @media only screen and (max-width: 767px)
+    background-color: white
+.navbar-default
+  border-color: transparent!important
+.navbar
+  margin-bottom: 0!important
+  position: fixed!important
+  background-color: white
+  width: 100vw
+  border-radius: 0px
+  z-index: 1000
+  height: 6rem
+  transition: height .5s ease
+  @media only screen and (max-width: 767px)
+    padding-right: 0rem
+    position: fixed!important
+  .container-fluid
+    padding: 0
+    a.navbar-brand
+      content: image_url('conti-logo-small.png')
+      padding: 0
+      padding-top: 0rem
+      height: 5.5rem
+      margin-left: 3rem
+      transition: height .5s ease
+      @media only screen and (max-width: 767px)
+        padding-top: .5rem
+    a.navbar-brand:hover
+      background-color: transparent
+    .collapse.navbar-collapse
+      margin-top: -2rem
+      @media only screen and (max-width: 767px)
+        margin-top: 0
+        height: 25rem
+      .navbar-nav
+        float: right
+        height: 5.8rem
+        padding: .5rem 0
+        padding-top: .4rem
+        padding-right: 3rem
+        @media only screen and (max-width: 910px)
+          float: right!important
+        @media only screen and (max-width: 767px)
+          float: none!important
+          background-color: white
+          height: 52rem
+          padding: 0
+          margin-top: 0rem!important
+        li
+          list-style: none
+          text-align: center
+          width: 12rem
+          height: 5rem
+          transition: background-color .5s ease, height .5s ease
+          background-color: transparent
+          @media only screen and (min-width: 767px) and (max-width: 910px)
+            width: 10rem!important
+          a
+            transition: font-size ease .5s, height .5s ease, padding-top .5s ease
+            font-size: 1.5rem
+            height: 5rem
+            color: black
+            @media only screen and (min-width: 769px) and (max-width: 910px)
+              font-size: 1.2rem!important
+            @media only screen and (max-width: 500px)
+              font-size: inherit
+              transition: none
+              height: 4rem
+              color: inherit
+              padding-left: 2rem
+          a:hover
+            background-color: transparent
+            text-decoration: none
+            color: black
+          @media only screen and (max-width: 767px)
+            width: 100%
+            text-align: left
+            height: 4rem
+          ul.dropdown-menu
+            min-width: 6rem
+            width: 20rem
+            border: none
+            padding-bottom: 2rem
+            li
+              height: 3rem!important
+              text-align: left
+              a.dropdown-item
+                line-height: 3rem!important
+              a:hover
+                text-decoration: underline
+            li:hover
+              background-color: transparent!important
+        li:hover
+          transition: background-color .5s ease, height .5s ease
+          background-color: lightgray
+        li.active
+          height: 5rem
+          @media only screen and (max-width: 767px)
+            width: 100%
+            text-align: left
+            height: 4rem
+        li.active:hover
+          transition: height .5s ease
+.dropdown.glass.open
+  @media only screen and (max-width: 767px)
+    margin-bottom: 27rem!important
+  li
+    @media only screen and (max-width: 767px)
+      height: 2rem!important
+.dropdown.metal.open
+  @media only screen and (max-width: 767px)
+    margin-bottom: 7rem!important
+  li
+    @media only screen and (max-width: 767px)
+      height: 2rem!important
+.navbar-toggle
+  margin-top: 13px!important

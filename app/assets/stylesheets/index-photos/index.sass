@@ -1,0 +1,120 @@
+.courasel-container
+  padding: 0!important
+  margin: 0!important
+.index-container
+  background-color: white
+  padding: 0rem!important
+  padding-bottom: 1rem!important
+  margin-top: 5rem
+  .filter-bar
+    margin-top: .2rem
+    padding: 0rem
+.index-photos
+  height: 45rem!important
+  margin-top: 5rem
+  .photo-container
+    transition: box-shadow 1.5s
+    box-shadow: 0rem 0rem 4rem -0.5rem rgba(30,30,30,0.5)
+    padding: .6rem 0
+    border-radius: 5px
+    background-color: rgba(200,200,200,0.3)!important
+    img
+      display: block
+      margin: 0 auto
+      cursor: pointer
+      height: 100%
+      max-width: 90%
+      background-size: 100% 100%
+  .photo-container:hover
+    transition: box-shadow 1s
+    box-shadow: 0rem 0rem 2rem 1rem rgba(30,30,30,0.5)
+.filters
+  width: 100%
+  padding: 0!important
+  margin: 0!important
+  border: solid .5px rgba(80,80,80,0.2)
+  background-color: rgba(200,200,200,0.1)
+  .search-dropdowns
+    width: 100%
+    padding: 0!important
+    margin: 0!important
+    border-radius: 0px
+    background-color: rgba(200,200,200,0.1)
+    border: none
+    height: 4rem
+    font-size: 1.65rem
+  .search-dropdowns:focus
+    outline: none
+.modal-dialog
+  margin: 0 auto!important
+  margin-top: 20rem!important
+  width: 50vw!important
+.modal-content
+  background-color: transparent!important
+  border: none!important
+  box-shadow: none!important
+  width: 50vw!important
+  margin: 0 auto
+  img
+    padding-top: 0rem
+    margin-top: 0rem
+    max-height: 60vh
+    display: block
+    margin: 0 auto
+    border: none!important
+    box-shadow: 0rem 0rem 2rem 1rem rgba(30,30,30,0.5)
+.modal-footer
+  height: 0rem!important
+  padding: 0rem!important
+  border: none!important
+  background-color: transparent!important
+  button
+    width: 0rem
+    span
+      position: relative
+      top: -20rem!important
+      right: -26rem
+      font-size: 15rem!important
+      color: white
+    span:focus
+      outline: none!important
+  button:focus
+    outline: none!important
+.modal-backdrop.in
+  opacity: 0.65!important
+.index-banner
+  .banner-picture
+    background-color: rgba(200,200,200,0.3)
+    .index-banner-container
+      content: image_url('conti-logo.png')
+      height: 40rem
+      margin: 0 auto
+      padding-top: 15rem
+      background-size: contain
+      background-repeat: no-repeat
+      @media only screen and (max-width: 500px)
+        height: 25rem
+        padding-top: 10rem
+    .index-banner-tag
+      margin: 0 auto
+      text-align: center
+      width: 60vw
+      @media only screen and (max-width: 500px)
+        width: 95vw
+      p
+        font-size: 2.2rem
+        line-height: 3.5rem
+        @media only screen and (max-width: 500px)
+          font-size: 1.4rem
+        span
+          transition: font-size 1s, color 1s
+        span:hover
+          transition: font-size .5s, color .5s
+          color: rgb(170,15,0)
+          cursor: default
+          font-size: 2.25rem
+      p:hover
+        cursor: default
+.gallary-name
+  text-align: center
+  text-transform: capitalize

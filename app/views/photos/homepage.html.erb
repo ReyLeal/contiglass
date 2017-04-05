@@ -1,0 +1,61 @@
+
+<%= render './application/navbar' %>
+<%= render 'courasel' %>
+
+<div class="container-fluid">
+  <div class="col-xs-12 col-sm-12 col-xs-12 cta-top">
+    <div class="col-xs-10 col-xs-offset-1">
+      <h2>Browse Our Gallery</h2>
+    </div>
+    <div class="col-xs-3 col-xs-offset-3"></div>
+    <div class="col-xs-1 center-line-arrow">
+      <i class="fa fa-angle-down fa-3x" aria-hidden="true"></i>
+    </div>
+    <div class="col-xs-3"></div>
+  </div>
+
+  <div class="col-xs-12 slides">
+    <div class="col-md-6 col-sm-6 col-xs-12">  <!-- Slide in Left photo -->
+      <div class="left-slide-in col-md-12 col-sm-12 col-xs-12">
+      </div>
+    </div>
+    <div class="col-md-6 col-sm-6 col-xs-12"> <!-- Slide in Right photo -->
+      <div class="right-slide-in col-md-12 col-sm-12 col-xs-12">
+      </div>
+    </div>
+  </div>
+
+  <div class="col-xs-12 overlays">
+    <div class="col-md-6 col-sm-6 col-xs-12">  <!-- Slide in Left photo -->
+      <div class="left-overlay col-md-12 col-sm-12 col-xs-12">
+        <div class="overlay-text col-md-12">
+          Browse Staircases
+        </div>
+        <div class="overlay-btn col-xs-12">
+          <button class='overlay-btn-btn stairs'>G E T &nbsp S T A R T E D</button>
+          <%= link_to 'Shower Doors', glass_stairs_index_path, id: 'link-to-stairs'%>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 col-sm-6 col-xs-12"> <!-- Slide in Right photo -->
+      <div class="right-overlay col-md-12 col-sm-12 col-xs-12">
+        <div class="overlay-text col-md-12">
+          Browse Metal Fabrication
+        </div>
+        <div class="overlay-btn col-xs-12">
+          <button class='overlay-btn-btn metal'>G E T &nbsp S T A R T E D</button>
+          <%= link_to 'Shower Doors', metal_fabrications_index_path, id: 'link-to-metal'%>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-12 col-sm-12 col-xs-12 cta-bot">
+  </div>
+  <div class="col-xs-12  cta-text">
+    <h1>Taking Glass To A Whole New Level</h1>
+  </div>
+
+  <%= render './application/footer' %>
+
+</div>

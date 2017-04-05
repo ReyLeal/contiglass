@@ -1,0 +1,44 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Project name</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse" aria-expanded="true">
+      <ul class="nav navbar-nav">
+        <li class="active home"><a href="/">Home</a></li>
+        <li class="nav-item glass dropdown ">  <!-- Start Dropdown -->
+          <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Glass Work
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><%= link_to 'Staircases', glass_stairs_index_path , class: 'dropdown-item '%></li></br>
+            <li><%= link_to 'Railings', glass_railings_index_path , class: 'dropdown-item'%></li></br>
+            <li><%= link_to 'Elevators', glass_elevators_index_path , class: 'dropdown-item'%></li></br>
+            <li><%= link_to 'Windows & Doors', glass_windows_doors_index_path , class: 'dropdown-item'%></li></br>
+            <li><%= link_to 'Wine Rooms', glass_wine_rooms_index_path , class: 'dropdown-item'%></li></br>
+            <li><%= link_to 'Shower Doors', glass_shower_doors_index_path , class: 'dropdown-item'%></li></br>
+            <li><%= link_to 'Other', other_glass_structures_index_path , class: 'dropdown-item'%></li>
+          </ul>
+        </li>                <!-- End Dropdown -->
+        <li class="nav-item metal dropdown">  <!-- Start Dropdown -->
+          <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            Metal Work
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><%= link_to 'Metal Railings', metal_railings_index_path , class: 'dropdown-item'%></li></br>
+            <li><%= link_to 'Metal Fabrications', metal_fabrications_index_path , class: 'dropdown-item'%></li>
+          </ul>
+        </li>                <!-- End Dropdown -->
+        <li class='all'><%= link_to 'All Photos', all_photos_index_path %></li>
+        <li class='about'><a href="/">About Us</a></li>
+        <li class='contact'><a href="/">Contact Us</a></li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</nav>

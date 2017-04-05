@@ -1,0 +1,63 @@
+<%= render './application/navbar' %>
+<%= render './photos/courasel' %>
+
+<div class="container index-container">
+
+  <div class="col-xs-12 col-sm-12 col-xs-12 cta-top">
+    <div class="col-xs-8 col-xs-offset-2">
+      <h2 class='gallary-name'>Browse Our Gallery</h2>
+    </div>
+    <div class="col-xs-3 col-xs-offset-3"></div>
+    <div class="col-xs-1 center-line-arrow">
+      <i class="fa fa-angle-down fa-3x" aria-hidden="true"></i>
+    </div>
+    <div class="col-xs-3"></div>
+  </div>
+
+  <div class="index-display-all col-md-12 col-xs-12">
+    <% @all_photos.order(:id).each do  |photo| %>
+    <% if photo.id.odd? %>
+    <a type="button" data-toggle="modal" data-target="#myModal<%= photo.id.to_s %>">
+      <div class="index-photos col-md-5">
+        <div class="photo-container" data-lightbox="bot-cta-2" >
+          <%= image_tag photo.photos.url %>
+        </div>
+      </div>
+    </a>
+    <div class="modal fade" id="myModal<%= photo.id.to_s %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-footer col-md-12 col-xs-12">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        </div>
+        <div class="modal-content">
+          <%= image_tag photo.photos.url %>
+        </div>
+      </div>
+    </div>
+    <% end %>
+
+    <% if photo.id.even? %>
+    <a type="button" data-toggle="modal" data-target="#myModal<%= photo.id.to_s %>">
+      <div class="index-photos col-md-5 col-md-offset-2">
+        <div class="photo-container">
+          <%= image_tag photo.photos.url %>
+        </div>
+      </div>
+    </a>
+    <div class="modal fade" id="myModal<%= photo.id.to_s %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-footer col-md-12 col-xs-12">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        </div>
+        <div class="modal-content">
+          <%= image_tag photo.photos.url %>
+        </div>
+      </div>
+    </div>
+    <% end %>
+    <% end %>
+  </div>
+  <%= will_paginate @all_photos %>
+</div>
+<div class="<%= controller_name %>" id='test-div'></div>
+<%= render './application/footer' %>
