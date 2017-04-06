@@ -8,13 +8,11 @@ task :load_photos => :environment do
   def load_photos(file_folder,variable_class_name, class_child_name, filename, class_string, max_while)
     i = 1
     while i <= max_while do
-      path_lower = "conti-photos/conti_photo_database/#{file_folder}/#{filename}#{i}.jpg"
-      path_upper = "conti-photos/conti_photo_database/#{file_folder}/#{filename}#{i}.JPG"
-      path_lower_or_upper = path_lower || path_upper
+      path = "conti-photos/conti_photo_database/#{file_folder}/#{filename}#{i}.jpg"
 
-      puts File.open((path_lower_or_upper), "r")
-      if File.open(path_lower_or_upper, "r")
-        photo = variable_class_name.new(photos: File.new(path_lower_or_upper, "r"))
+      puts File.open((path || ), "r")
+      if File.open(path, "r")
+        photo = variable_class_name.new(photos: File.new(path, "r"))
         class_child_name << photo
         photo.save!
         puts 'file saved'
@@ -46,7 +44,7 @@ task :load_photos => :environment do
   #Loading glass_other
   # load_photos("glass_photos/other" ,OtherGlassStructure, GlassPhoto.first.other_glass_structures, "other", "OtherGlassStructure", 10)
   #Loading metal_fabrication
-  load_photos("metal_photos/fabrication" ,MetalFabrication, MetalPhoto.first.metal_fabrications, "fabrication", "MetalFabrication", 34)
+  # load_photos("metal_photos/fabrication" ,MetalFabrication, MetalPhoto.first.metal_fabrications, "fabrication", "MetalFabrication", 34)
   #Loading metal_railings
   load_photos("metal_photos/railings" ,MetalRailing, MetalPhoto.first.metal_railings, "railing", "MetalRailing", 12)
 
