@@ -6,7 +6,7 @@ task :load_photos => :environment do
   Photo.first.metal_photos.create!
 
   def load_photos(file_folder,variable_class_name, class_child_name, filename, class_string, max_while)
-    i = 99
+    i = 191
     while i <= max_while do
       path = "conti-photos/conti_photo_database/#{file_folder}/#{filename}#{i}.jpg"
 
@@ -26,7 +26,7 @@ task :load_photos => :environment do
   end
 
   # Loading all_photos
-  load_photos("all_photos" ,AllPhoto, Photo.first.all_photos, "all", "AllPhoto", 190)
+  load_photos("all_photos" ,AllPhoto, Photo.first.all_photos, "all", "AllPhoto", 276)
   # Loading glass_stairs
   # load_photos("glass_photos/stairs" ,GlassStair, GlassPhoto.first.glass_stairs, "stairs", "GlassStair", 88)
   # # Loading glass_railings
