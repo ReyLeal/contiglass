@@ -10,7 +10,7 @@ task :load_photos => :environment do
     while i <= max_while do
       path = "conti-photos/conti_photo_database/#{file_folder}/#{filename}#{i}.jpg"
 
-      puts File.open((path || ), "r")
+      puts File.open(path), "r")
       if File.open(path, "r")
         photo = variable_class_name.new(photos: File.new(path, "r"))
         class_child_name << photo
