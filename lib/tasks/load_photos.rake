@@ -8,7 +8,7 @@ task :load_photos => :environment do
   def load_photos(file_folder,variable_class_name, class_child_name, filename, class_string, max_while)
     i = 1
     while i <= max_while do
-      path = "tmp/conti-photos/conti_photo_database/#{file_folder}/#{filename}#{i}.jpg"
+      path = "conti-photos/conti_photo_database/#{file_folder}/#{filename}#{i}.jpg"
       puts File.open(path, "r")
       if File.open(path, "r")
         photo = variable_class_name.new(photos: File.new(path, "r"))
