@@ -26,7 +26,7 @@ task :load_photos => :environment do
   end
 
   # Loading all_photos
-  load_photos("all_photos" ,AllPhoto, Photo.first.all_photos, "all", "AllPhoto", 99)
+  load_photos("all_photos" ,AllPhoto, Photo.first.all_photos, "all", "AllPhoto", 98)
   # Loading glass_stairs
   # load_photos("glass_photos/stairs" ,GlassStair, GlassPhoto.first.glass_stairs, "stairs", "GlassStair", 88)
   # # Loading glass_railings
