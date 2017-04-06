@@ -26,11 +26,11 @@ task :load_photos => :environment do
   end
 
   # Loading all_photos
-  # load_photos("all_photos" ,AllPhoto, Photo.first.all_photos, "all", "AllPhoto", 276)
+  load_photos("all_photos" ,AllPhoto, Photo.first.all_photos, "all", "AllPhoto", 99)
   # Loading glass_stairs
-  load_photos("glass_photos/stairs" ,GlassStair, GlassPhoto.first.glass_stairs, "stairs", "GlassStair", 88)
+  # load_photos("glass_photos/stairs" ,GlassStair, GlassPhoto.first.glass_stairs, "stairs", "GlassStair", 88)
   # # Loading glass_railings
-  load_photos("glass_photos/railings" ,GlassRailing, GlassPhoto.first.glass_railings, "railing", "GlassRailing", 46)
+  # load_photos("glass_photos/railings" ,GlassRailing, GlassPhoto.first.glass_railings, "railing", "GlassRailing", 46)
   # Loading glass_elevator
   # load_photos("glass_photos/elevators" ,GlassElevator, GlassPhoto.first.glass_elevators, "elevator", "GlassElevator", 7)
   # Loading glass_floor
