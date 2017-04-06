@@ -9,7 +9,24 @@ Rails.application.configure do
   # and those relying on copy on write to perform better.
   # Rake tasks automatically ignore this option for performance.
   config.eager_load = true
-
+  config.paperclip_defaults = {
+    storage: :s3,
+    s3_credentials: {
+      bucket: 'conti-web-photos',
+      access_key_id: 'AKIAIIAZQ6YHDBGHATDQ',
+      secret_access_key: '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',
+      s3_region: 'us-east-1'
+    }
+  }
+  # config.paperclip_defaults = {
+  #   storage: :s3,
+  #   s3_credentials: {
+  #     bucket: ENV.fetch('conti-web-photos'),
+  #     access_key_id: ENV.fetch('AKIAIIAZQ6YHDBGHATDQ'),
+  #     secret_access_key: ENV.fetch('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'),
+  #     s3_region: ENV.fetch('us-east-1'),
+  #   }
+  # }
   # Full error reports are disabled and caching is turned on.
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true

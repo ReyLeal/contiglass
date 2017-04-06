@@ -20,7 +20,7 @@
     <a type="button" data-toggle="modal" data-target="#myModal<%= photo.id.to_s %>">
       <div class="index-photos col-md-5">
         <div class="photo-container" data-lightbox="bot-cta-2" >
-          <%= image_tag photo.photos.url %>
+          <%= image_tag photo.photos.url(:medium) %>
         </div>
       </div>
     </a>

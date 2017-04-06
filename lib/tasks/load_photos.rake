@@ -8,11 +8,13 @@ task :load_photos => :environment do
   def load_photos(file_folder,variable_class_name, class_child_name, filename, class_string, max_while)
     i = 1
     while i <= max_while do
-      puts File.open("/Users/Dev./Desktop/conti_photo_database/#{file_folder}/#{filename}#{i}.jpg", "r")
-      if File.open("/Users/Dev./Desktop/conti_photo_database/#{file_folder}/#{filename}#{i}.jpg", "r")
-        photo = variable_class_name.new(photos: File.new("/Users/Dev./Desktop/conti_photo_database/#{file_folder}/#{filename}#{i}.jpg", "r"))
+      path = "/Users/Dev./Desktop/conti_photo_database/#{file_folder}/#{filename}#{i}.jpg"
+      puts File.open(path, "r")
+      if File.open(path, "r")
+        photo = variable_class_name.new(photos: File.new(path, "r"))
         class_child_name << photo
         photo.save!
+        puts 'file saved'
         if i%10 == 0
           puts "#{i}"
         end
@@ -25,9 +27,9 @@ task :load_photos => :environment do
   # Loading all_photos
   # load_photos("all_photos" ,AllPhoto, Photo.first.all_photos, "all", "AllPhoto", 276)
   # Loading glass_stairs
-  load_photos("glass_photos/stairs" ,GlassStair, GlassPhoto.first.glass_stairs, "stairs", "GlassStair", 88)
+  # load_photos("glass_photos/stairs" ,GlassStair, GlassPhoto.first.glass_stairs, "stairs", "GlassStair", 88)
   # # Loading glass_railings
-  # load_photos("glass_photos/railings" ,GlassRailing, GlassPhoto.first.glass_railings, "railing", "GlassRailing", 46)
+  load_photos("glass_photos/railings" ,GlassRailing, GlassPhoto.first.glass_railings, "railing", "GlassRailing", 46)
   # Loading glass_elevator
   # load_photos("glass_photos/elevators" ,GlassElevator, GlassPhoto.first.glass_elevators, "elevator", "GlassElevator", 7)
   # Loading glass_floor
@@ -39,10 +41,10 @@ task :load_photos => :environment do
   #Loading glass_wine_room
   # load_photos("glass_photos/wine_rooms" ,GlassWineRoom, GlassPhoto.first.glass_wine_rooms, "wineroom", "GlassWineRoom", 12)
   #Loading glass_other
-  load_photos("glass_photos/other" ,OtherGlassStructure, GlassPhoto.first.other_glass_structures, "other", "OtherGlassStructure", 10)
+  # load_photos("glass_photos/other" ,OtherGlassStructure, GlassPhoto.first.other_glass_structures, "other", "OtherGlassStructure", 10)
   #Loading metal_fabrication
-  load_photos("metal_photos/fabrication" ,MetalFabrication, MetalPhoto.first.metal_fabrications, "fabrication", "MetalFabrication", 34)
+  # load_photos("metal_photos/fabrication" ,MetalFabrication, MetalPhoto.first.metal_fabrications, "fabrication", "MetalFabrication", 34)
   #Loading metal_railings
-  load_photos("metal_photos/railings" ,MetalRailing, MetalPhoto.first.metal_railings, "railing", "MetalRailing", 12)
+  # load_photos("metal_photos/railings" ,MetalRailing, MetalPhoto.first.metal_railings, "railing", "MetalRailing", 12)
 
 end

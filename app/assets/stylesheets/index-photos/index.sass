@@ -86,19 +86,36 @@
   .banner-picture
     background-color: rgba(200,200,200,0.3)
     .index-banner-container
-      content: image_url('conti-logo.png')
+      background-image: image_url('conti-logo.png')
       height: 40rem
       margin: 0 auto
-      padding-top: 15rem
+      width: 70rem
+      position: relative
+      top: 10rem
       background-size: contain
       background-repeat: no-repeat
+      @media only screen and (max-width: 1100px)
+        height: 35rem
+      @media only screen and (max-width: 800px)
+        height: 30rem
+        width: 55rem
       @media only screen and (max-width: 500px)
+        height: 30rem
+        width: 80vw
+      @media only screen and (max-width: 400px)
+        height: 30rem
+        width: 90vw
+      @media only screen and (max-width: 376px)
         height: 25rem
-        padding-top: 10rem
+        width: 90vw
+      @media only screen and (max-width: 345px)
+        height: 21.5rem
     .index-banner-tag
       margin: 0 auto
       text-align: center
       width: 60vw
+      @media only screen and (max-width: 900px)
+        width: 80vw
       @media only screen and (max-width: 500px)
         width: 95vw
       p
@@ -106,6 +123,9 @@
         line-height: 3.5rem
         @media only screen and (max-width: 500px)
           font-size: 1.4rem
+        @media only screen and (max-width: 500px)
+          font-size: 1.3rem
+          line-height: 3rem
         span
           transition: font-size 1s, color 1s
         span:hover
