@@ -44,7 +44,7 @@ task :load_photos => :environment do
   #Loading glass_other
   # load_photos("glass_photos/other" ,OtherGlassStructure, GlassPhoto.first.other_glass_structures, "other", "OtherGlassStructure", 10)
   #Loading metal_fabrication
-  # load_photos("metal_photos/fabrication" ,MetalFabrication, MetalPhoto.first.metal_fabrications, "fabrication", "MetalFabrication", 34)
+  load_photos("metal_photos/fabrication" ,MetalFabrication, MetalPhoto.first.metal_fabrications, "fabrication", "MetalFabrication", 34)
   #Loading metal_railings
   load_photos("metal_photos/railings" ,MetalRailing, MetalPhoto.first.metal_railings, "railing", "MetalRailing", 12)
 
