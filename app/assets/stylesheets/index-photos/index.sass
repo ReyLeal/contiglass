@@ -51,16 +51,21 @@
   margin: 0 auto!important
   margin-top: 20rem!important
   width: 50vw!important
+  margin-left: 0!important
+  margin-right: 0!important
 .modal-content
   background-color: transparent!important
   border: none!important
   box-shadow: none!important
-  width: 50vw!important
+  width: 100vw!important
+  display: flex
+  align-items: center
   margin: 0 auto
   img
     padding-top: 0rem
     margin-top: 0rem
     max-height: 60vh
+    max-width: 90vw
     display: block
     margin: 0 auto
     border: none!important
@@ -75,9 +80,17 @@
     span
       position: relative
       top: -20rem!important
-      right: -26rem
+      right: -50rem
       font-size: 15rem!important
       color: white
+      @media only screen and (max-width: 1160px)
+        right: -40rem
+      @media only screen and (max-width: 960px)
+        right: -30rem
+      @media only screen and (max-width: 775px)
+        right: -25rem
+      @media only screen and (max-width: 650px)
+        right: -30vw
     span:focus
       outline: none!important
   button:focus
