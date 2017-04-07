@@ -18,9 +18,9 @@
     <% @all_photos.order(:id).each do  |photo| %>
     <% if photo.id.odd? %>
     <a type="button" data-toggle="modal" data-target="#myModal<%= photo.id.to_s %>">
-      <div class="index-photos col-md-5">
+      <div class="index-photos col-xs-6">
         <div class="photo-container" data-lightbox="bot-cta-2" >
-          <%= image_tag photo.photos.url(:medium) %>
+          <%= image_tag photo.photos.url %>
         </div>
       </div>
     </a>
@@ -38,7 +38,7 @@
 
     <% if photo.id.even? %>
     <a type="button" data-toggle="modal" data-target="#myModal<%= photo.id.to_s %>">
-      <div class="index-photos col-md-5 col-md-offset-2">
+      <div class="index-photos col-xs-6 ">
         <div class="photo-container">
           <%= image_tag photo.photos.url %>
         </div>
