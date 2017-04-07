@@ -51,11 +51,12 @@
         li
           list-style: none
           text-align: center
-          clear: both
           width: 12rem
           height: 5rem
           transition: background-color .5s ease, height .5s ease
           background-color: transparent
+          @media only screen and (max-width: 769px)
+            clear: both
           @media only screen and (min-width: 767px) and (max-width: 910px)
             width: 10rem!important
           a
