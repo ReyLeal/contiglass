@@ -47,7 +47,7 @@ $(document).on('turbolinks:load',function(){     // Navbar Scroll-Spy
   });
   $('.glass-dropdown').click(function(){
     if ($('.glass-dropdown').hasClass('inactive')){
-      $('.navbar-nav').height('63rem');
+      $('.navbar-nav').height('64rem');
       $('.glass-dropdown').removeClass('inactive');
       $('.glass-dropdown').addClass('activated');
     } else {
