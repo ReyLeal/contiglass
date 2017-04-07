@@ -45,6 +45,28 @@ $(document).on('turbolinks:load',function(){     // Navbar Scroll-Spy
   $('.overlay-btn-btn.metal').on('click', function() {
     document.getElementById('link-to-metal').click();
   });
+  $('.glass-dropdown').click(function(){
+    if ($('.glass-dropdown').hasClass('inactive')){
+      $('.navbar-nav').height('62rem');
+      $('.glass-dropdown').removeClass('inactive');
+      $('.glass-dropdown').addClass('activated');
+    } else {
+        $('.navbar-nav').height('29rem');
+        $('.glass-dropdown.activated').removeClass('activated');
+        $('.glass-dropdown.activated').addClass('inactive');
+    }
+  });
+  $('.metal-dropdown').click(function(){
+    if ($('.metal-dropdown').hasClass('inactive')){
+      $('.navbar-nav').height('37rem');
+      $('.metal-dropdown').removeClass('inactive');
+      $('.metal-dropdown').addClass('activated');
+    } else {
+        $('.navbar-nav').height('29rem');
+        $('.metal-dropdown.activated').removeClass('activated');
+        $('.metal-dropdown.activated').addClass('inactive');
+    }
+  });
 });
 
 if (window.matchMedia('(min-width: 501px)').matches) {
