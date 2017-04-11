@@ -37,8 +37,38 @@
         </li>                <!-- End Dropdown -->
         <li class='all'><%= link_to 'All Photos', all_photos_index_path %></li>
         <li class='about'><a href="/">About Us</a></li>
-        <li class='contact'><a href="/">Contact Us</a></li>
+        <li class='contact'>
+          <a data-toggle="modal" data-target="#myModal" href="">Contact Us</a>
+          <!-- <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+            Launch demo modal
+          </button> -->
+        </li>
       </ul>
     </div><!--/.nav-collapse -->
   </div>
 </nav>
+
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="email-modal-dialog" role="document">
+    <div class="email-modal-content">
+      <div class="email-modal-body">
+        <div class="col-md-8 col-md-offset-2">
+          <div class="col-md-12">
+            <button type="button" class="btn btn-default" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+          </div>
+          <div class="col-md-6">
+            <%= render './emails/email.html.erb' %>
+          </div>
+          <div class="col-md-6">
+
+          </div>
+        </div>
+
+      </div>
+      <div class="email-modal-footer">
+
+      </div>
+    </div>
+  </div>
+</div>

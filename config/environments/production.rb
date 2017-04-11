@@ -12,21 +12,22 @@ Rails.application.configure do
   config.paperclip_defaults = {
     storage: :s3,
     s3_credentials: {
-      bucket: 'conti-web-photos',
-      access_key_id: 'AKIAIIAZQ6YHDBGHATDQ',
-      secret_access_key: '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',
-      s3_region: 'us-east-1'
+      bucket: ENV['S3_BUCKET'],
+      access_key_id: ENV['S3_ACCESS_KEY'],
+      secret_access_key: ENV['S3_SECRET_KEY'],
+      s3_region: ENV['S3_REGION']
     }
   }
-  # config.paperclip_defaults = {
-  #   storage: :s3,
-  #   s3_credentials: {
-  #     bucket: ENV.fetch('conti-web-photos'),
-  #     access_key_id: ENV.fetch('AKIAIIAZQ6YHDBGHATDQ'),
-  #     secret_access_key: ENV.fetch('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'),
-  #     s3_region: ENV.fetch('us-east-1'),
-  #   }
-  # }
+  config.action_mailer.smtp_settings = {
+    address: "smtp.gmail.com",
+    port: 587,
+    domain: "contiglass.net",
+    user_name: ENV['GMAIL_USERNAME'],
+    password: ENV['GMAIL_PASSWORD'],
+    authentication: :plain,
+    enable_starttls_auto: true
+  }
+
   # Full error reports are disabled and caching is turned on.
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true

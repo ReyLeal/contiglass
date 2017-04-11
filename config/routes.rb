@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+
+  get 'emails/new'
+
+  get 'emails/create'
+
   get 'glass_floors/index'
 
   get 'metal_railings/index'
@@ -21,6 +26,11 @@ Rails.application.routes.draw do
 
   get 'other_glass_structures/index'
 
+  get 'contact', to: 'emails#new', as: 'contact'
+
+  post 'contact', to: 'emails#create'
+
   resources :photos
   root 'photos#homepage'
+
 end

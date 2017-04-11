@@ -1,0 +1,22 @@
+<%= form_for @email, url: contact_path do |email_form| %>
+  <h3>Get In Touch!</h3>
+  <fieldset>
+    <div class="field">
+      <%= email_form.text_field :name, placeholder: "Name" %>
+    </div>
+
+    <div class="field">
+      <%= email_form.email_field :email, placeholder: "Email"%>
+    </div>
+
+    <div class="field">
+      <%= email_form.text_area :content, placeholder: "Message"%>
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <div class="field">
+      <%= email_form.submit "S E N D" %>
+    </div>
+  </fieldset>
+<% end %>

@@ -9,6 +9,7 @@ class PhotosController < ApplicationController
   # end
 
   def homepage
+    @email = Email.new
   end
   #
   # def new
