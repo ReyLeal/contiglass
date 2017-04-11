@@ -96,7 +96,9 @@ $(document).on('turbolinks:load', function() {
   });
 });
 
-if (window.matchMedia('(min-width: 501px)').matches) {
+if ((window.matchMedia('(min-width: 501px)').matches)
+    &&
+    (window.matchMedia('(min-height: 501px)').matches)) {
   $(document).ready(function(){     // Slide-in Scroll-Spy
     var offset = $('.courasel-container').offset().top + 300;
     var stop = Math.round($(window).scrollTop());
