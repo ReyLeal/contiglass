@@ -361,12 +361,16 @@ ol
 .slides
   overflow: hidden
 .email-modal-body
+  padding-top: 20rem
   margin-right: 0!important
   height: 60rem
   width: 100vw
   display: flex
   text-align: center
   align-items: center
+  @media only screen and (max-width: 770px)
+    position: relative
+    top: 22rem
   .col-md-12
     text-align: right
     button
@@ -404,3 +408,5 @@ ol
           border: 2px solid rgba(30,30,30,0.9)
           height: 10rem
           width: 80%
+          max-height: 10rem
+          max-width: 80%
