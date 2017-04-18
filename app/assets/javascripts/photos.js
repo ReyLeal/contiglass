@@ -67,8 +67,20 @@ $(document).on('turbolinks:load',function(){     // Navbar Scroll-Spy
       $('.metal-dropdown').addClass('inactive');
     }
   });
+
 });
+
 $(document).on('turbolinks:load', function() {
+  if ($('#myModal2').css('display') === 'none') {
+    $('.footer-button>button').click(function() {
+      $('iframe').attr('src', 'https://www.youtube.com/embed/emKe5u7RXX0?rel=0');
+    });
+  };
+  if ($('#myModal2').css('display') === 'block') {
+    $('.footer-button>button').click(function() {
+      $('iframe').attr('src', '');;
+    });
+  };
   $('.next-slide-right').click(function() {
     if($('ol>li').last().hasClass('active')){
       $('ol>li').first().click();
