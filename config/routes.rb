@@ -28,6 +28,8 @@ Rails.application.routes.draw do
 
   get 'contact', to: 'emails#new', as: 'contact'
 
+  get "about", to: 'all_photos#about', as: 'about'
+
   post 'contact', to: 'emails#create'
 
   resources :photos

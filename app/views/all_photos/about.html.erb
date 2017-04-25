@@ -1,0 +1,9 @@
+<%= render './application/navbar' %>
+<%= render './photos/courasel' %>
+<!-- <span class="about-identifier" style="visibility: hidden">About</span> -->
+<div class="container-fluid index-container">
+  <div class='col-sm-6 about-col'><%= link_to "", asset_path("editorial1.pdf"), target: "blank" , class: "editorial"%></div>
+  <div class='col-sm-6 about-col'><%= link_to "", asset_path("editorial2.pdf"), target: "blank", class: "red-editorial" %></div>
+</div>
+<div class="about" id='test-div'></div>
+<%= render './application/footer' %>
