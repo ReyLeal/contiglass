@@ -1,5 +1,5 @@
 class EmailMailer < ApplicationMailer
-  default from: "conti.do.not.reply@gmail.com"
+  default from: "contiglass.do.not.reply@gmail.com"
   default to: "horacio@contiglass.net"
 
   def new_email(email)
