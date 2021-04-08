@@ -101,7 +101,7 @@ GEM
       racc (~> 1.4)
     nokogiri (1.11.2-x86_64-linux)
       racc (~> 1.4)
-    paperclip (5.0.0)
+    paperclip (5.2.0)
       activemodel (>= 4.2.0)
       activesupport (>= 4.2.0)
       cocaine (~> 0.5.5)
@@ -204,7 +204,7 @@ DEPENDENCIES
   jbuilder (~> 2.5)
   jquery-rails
   listen (~> 3.0.5)
-  paperclip (~> 5.0.0)
+  paperclip (~> 5.2.0)
   pg
   puma (~> 3.0)
   rails (~> 5.0.1)
