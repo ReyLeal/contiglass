@@ -1,6 +1,7 @@
 class MetalFabricationsController < ApplicationController
   def index
     @email = Email.new
-    @all_photos = MetalPhoto.first.metal_fabrications.paginate(:page => params[:page], :per_page => 30)
+    metal_photo = MetalPhoto.first
+    @all_photos = (metal_photo ? metal_photo.metal_fabrications : MetalFabrication.none).paginate(:page => params[:page], :per_page => 30)
   end
 end

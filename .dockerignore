@@ -1,0 +1,17 @@
+.git
+log
+tmp
+.bundle
+vendor/bundle
+node_modules
+public/assets
+public/packs
+coverage
+*.log
+.DS_Store
+
+# Large local image folder; images should come from S3 in production.
+Conti-Images
+
+# Local mirror of the S3 bucket; never send in Docker build context.
+contiglass2

@@ -1,6 +1,7 @@
 class OtherGlassStructuresController < ApplicationController
   def index
     @email = Email.new
-    @all_photos = GlassPhoto.first.other_glass_structures.paginate(:page => params[:page], :per_page => 30)
+    glass_photo = GlassPhoto.first
+    @all_photos = (glass_photo ? glass_photo.other_glass_structures : OtherGlassStructure.none).paginate(:page => params[:page], :per_page => 30)
   end
 end

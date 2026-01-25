@@ -7,12 +7,17 @@ class EmailsController < ApplicationController
      @email = Email.new(email_params)
 
      if @email.valid?
-       EmailMailer.new_email(@email).deliver
-       redirect_to :back
-       flash[:alert] = "Your email has been sent!"
+       begin
+         EmailMailer.new_email(@email).deliver_now
+         flash[:notice] = "Your email has been sent!"
+       rescue StandardError => e
+         Rails.logger.error("Email delivery failed: #{e.class}: #{e.message}")
+         flash[:alert] = "We couldn't send your message right now. Please try again later."
+       end
+       redirect_back(fallback_location: root_path)
      else
        flash[:alert] = "An error occurred while delivering this email."
-       redirect_to :back
+       redirect_back(fallback_location: root_path)
      end
    end
 

@@ -18,7 +18,5 @@ test:
 
 
 production:
-  adapter: postgresql
-  encoding: unicode
-  database: conti2-prod
+  url: <%= ENV["DATABASE_URL"] %>
   pool: 5

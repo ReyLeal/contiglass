@@ -1,0 +1,22 @@
+current directory: /Users/reinaldoleal/Documents/GitHub/contiglass/vendor/bundle/ruby/2.6.0/gems/puma-3.12.6/ext/puma_http11
+/System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/bin/ruby -I /System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0 -r ./siteconf20260124-48514-11jjyg8.rb extconf.rb
+checking for BIO_read() in -lcrypto... no
+checking for BIO_read() in -llibeay32... no
+creating Makefile
+
+current directory: /Users/reinaldoleal/Documents/GitHub/contiglass/vendor/bundle/ruby/2.6.0/gems/puma-3.12.6/ext/puma_http11
+make "DESTDIR=" clean
+
+current directory: /Users/reinaldoleal/Documents/GitHub/contiglass/vendor/bundle/ruby/2.6.0/gems/puma-3.12.6/ext/puma_http11
+make "DESTDIR="
+compiling http11_parser.c
+compiling io_buffer.c
+compiling mini_ssl.c
+compiling puma_http11.c
+linking shared-object puma/puma_http11.bundle
+ld: warning: search path '/AppleInternal/Library/BuildRoots/4~B5FAugAunRW9OK7YcFNXDBTTVy6DXTYoxzE3ORQ/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.6.Internal.sdk/usr/local/libressl-by-deployment-target/14.0/lib' not found
+ld: warning: search path '/AppleInternal/Library/BuildRoots/4~B5FAugAunRW9OK7YcFNXDBTTVy6DXTYoxzE3ORQ/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.6.Internal.sdk/usr/local/lib' not found
+
+current directory: /Users/reinaldoleal/Documents/GitHub/contiglass/vendor/bundle/ruby/2.6.0/gems/puma-3.12.6/ext/puma_http11
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 puma_http11.bundle ./.gem.20260124-48514-18qfuk4/puma

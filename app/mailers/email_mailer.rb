@@ -1,5 +1,5 @@
 class EmailMailer < ApplicationMailer
-  default from: "contiglass.do.not.reply@gmail.com"
+  default from: (ENV['GMAIL_USERNAME'].presence || "contiglass.do.not.reply@gmail.com")
   default to: "horacio@contiglass.net"
 
   def new_email(email)
