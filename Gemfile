@@ -5,7 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 gem 'hirb'
-gem "paperclip", "~> 5.0.0"
+gem "paperclip", "~> 5.2.0"
 gem 'will_paginate', '~> 3.1.0'
 gem 'aws-sdk', '~> 2.3'
 gem 'taps'
